@@ -1,10 +1,11 @@
 let express = require("express");
 let app = express();
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
     res.json({
         message: "Welcome to nodejs demo"
     });
+    next();
 });
 
 app.get("/url", (req, res, next) => {
